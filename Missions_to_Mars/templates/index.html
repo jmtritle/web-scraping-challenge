@@ -38,32 +38,11 @@
         </p>
 
         <h1>Mars: Hemispheres</h1>
-        <p> 
-            {{ mars_info.hemi_img_url[0]['title'] }}
-            <p>
-                <img src = {{ mars_info.hemi_img_url[0] }}
-            </p>
-        </p>
-
-        <p> 
-            {{ mars_info.hemi_img_url[1]['title'] }}
-            <p>
-                <img src = {{ mars_info.hemi_img_url[1] }}
-            </p>
-        </p>
-
-        <p> 
-            {{ mars_info.hemi_img_url[2]['title'] }}
-            <p>
-                <img src = {{ mars_info.hemi_img_url[2] }}
-            </p>
-        </p>
-
-        <p> 
-            {{ mars_info.hemi_img_url[3]['title'] }}
-            <p>
-                <img src = {{ mars_info.hemi_img_url[3] }}
-            </p>
+        <p>
+            {% for image in mars_info.hemi_img_url %}
+            <h3>{{image.title}}</h3>
+            <p><img src = '{{image.img_url}}'></p>
+            {% endfor %}
         </p>
         <script src="" async defer></script>
     </body>
