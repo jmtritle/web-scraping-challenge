@@ -94,7 +94,7 @@ def scrape_hemi():
     hemisphere_image_urls = []
 
     # getting a list of the image links (products)
-    products = soup.find('div', class_ = 'result-list')
+    products = h_soup.find('div', class_ = 'result-list')
     hemispheres = products.find_all('div', class_ = 'item')
 
     # setting up the for loop to pull the information on all four image links
