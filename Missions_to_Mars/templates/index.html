@@ -10,58 +10,59 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h2>Mars Headline</h2>
+        <h1>Mars Headline</h1>
+        <p><button type="button" class="btn btn-primary btn-lg" href="/scrape">Scrape Fresh Data</button></p>
         <p>
-            <h3>{{ mars_data.mars_headline }}</h3>
+            <h2>{{ mars_info.mars_headline }}</h2>
             <p>
-                {{ mars_data.mars_text }}
+                {{ mars_info.mars_text }}
             </p>
         </p>
-        <h2>Mars: Featured Image</h2>
+        <h1>Mars: Featured Image</h1>
         <p>
-            <img src = {{ mars_data.featured_img_url }} alt = "Featured Image">
+            <img src = {{ mars_info.featured_img_url }} alt = "Featured Image">
         </p>
-        <h2>Mars: Weather</h2>
+        <h1>Mars: Weather</h1>
         <p>
-            {{ mars_data.mars_weather }}
+            {{ mars_info.mars_weather }}
         </p>
-        <h2>Mars: Facts</h2>
+        <h1>Mars: Facts</h1>
         <p>
-            {{ mars_data.mars_facts }}
+            {{ mars_info.mars_facts }}
         </p>
 
-        <h2>Mars: Hemispheres</h2>
+        <h1>Mars: Hemispheres</h1>
         <p> 
-            {{ mars_data.hemi_img_url[0]['title'] }}
+            {{ mars_info.hemi_img_url[0]['title'] }}
             <p>
-                <img src = {{ mars_data.hemi_img_url[0] }}
-            </p>
-        </p>
-
-        <p> 
-            {{ mars_data.hemi_img_url[1]['title'] }}
-            <p>
-                <img src = {{ mars_data.hemi_img_url[1] }}
+                <img src = {{ mars_info.hemi_img_url[0] }}
             </p>
         </p>
 
         <p> 
-            {{ mars_data.hemi_img_url[2]['title'] }}
+            {{ mars_info.hemi_img_url[1]['title'] }}
             <p>
-                <img src = {{ mars_data.hemi_img_url[2] }}
+                <img src = {{ mars_info.hemi_img_url[1] }}
             </p>
         </p>
 
         <p> 
-            {{ mars_data.hemi_img_url[3]['title'] }}
+            {{ mars_info.hemi_img_url[2]['title'] }}
             <p>
-                <img src = {{ mars_data.hemi_img_url[3] }}
+                <img src = {{ mars_info.hemi_img_url[2] }}
+            </p>
+        </p>
+
+        <p> 
+            {{ mars_info.hemi_img_url[3]['title'] }}
+            <p>
+                <img src = {{ mars_info.hemi_img_url[3] }}
             </p>
         </p>
         <script src="" async defer></script>
